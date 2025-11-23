@@ -1,3 +1,4 @@
+// TypeScript interfaces for Job, Resume, and Feedback structures.
 interface Job {
   title: string;
   description: string;

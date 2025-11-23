@@ -1,3 +1,4 @@
+// Type definitions for Puter API
 interface FSItem {
   id: string;
   uid: string;

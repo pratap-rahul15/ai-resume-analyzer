@@ -1,3 +1,5 @@
+// Convert first page of PDF to image using pdfjs-dist
+
 export interface PdfConversionResult {
   imageUrl: string;
   file: File | null;
@@ -13,8 +15,11 @@ async function loadPdfJs(): Promise<any> {
   if (loadPromise) return loadPromise;
 
   isLoading = true;
+
   // @ts-expect-error - pdfjs-dist/build/pdf.mjs is not a module
   loadPromise = import("pdfjs-dist/build/pdf.mjs").then((lib) => {
+
+
     // Set the worker source to use local file
     lib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
     pdfjsLib = lib;
@@ -73,7 +78,7 @@ export async function convertPdfToImage(
         },
         "image/png",
         1.0
-      ); // Set quality to maximum (1.0)
+      ); 
     });
   } catch (err) {
     return {

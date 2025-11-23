@@ -6,6 +6,7 @@ import { type ReactElement, type JSXElementConstructor, type ReactNode, type Rea
 import { usePuterStore } from "~/lib/puter";
 import { Link, useNavigate } from "react-router";
 
+// Define types for Resume and KVItem
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "IntelliTrack" },
@@ -21,6 +22,7 @@ export default function Home() {
   const [resumes, setResumes] = useState<Resume[]>([]);
   const [loadingResumes, setLoadingResumes] = useState(false);
 
+// Redirect to auth if not authenticated
  useEffect(() => {
     if(!auth.isAuthenticated) navigate('/auth?next=/');
   }, [auth.isAuthenticated])
@@ -41,7 +43,7 @@ export default function Home() {
 
     loadResumes()
   }, []);  
-
+// Render the main home page
   return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
     <Navbar />
 

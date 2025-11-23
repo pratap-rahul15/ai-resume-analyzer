@@ -1,13 +1,16 @@
+// Component with support for single/multiple item expansion,
 import type { ReactNode } from "react";
 import React, { createContext, useContext, useState } from "react";
 import { cn } from "~/lib/utils";
 
+// Accordion Context and Hook
 interface AccordionContextType {
   activeItems: string[];
   toggleItem: (id: string) => void;
   isItemActive: (id: string) => boolean;
 }
 
+// Create Context
 const AccordionContext = createContext<AccordionContextType | undefined>(
   undefined
 );

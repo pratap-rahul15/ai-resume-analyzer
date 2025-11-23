@@ -1,3 +1,4 @@
+// A React component that displays a badge with different colors and text based on the score prop.
 interface ScoreBadgeProps {
   score: number;
 }

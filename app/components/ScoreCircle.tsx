@@ -1,3 +1,4 @@
+// A React component that displays a circular progress indicator with a gradient stroke
 const ScoreCircle = ({ score = 75 }: { score: number }) => {
   const radius = 40;
   const stroke = 8;

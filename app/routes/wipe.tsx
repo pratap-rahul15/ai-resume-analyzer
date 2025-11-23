@@ -1,7 +1,9 @@
+// WipeApp component to delete all files and key-value data
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { usePuterStore } from "~/lib/puter";
 
+// Define FSItem type
 const WipeApp = () => {
     const { auth, isLoading, error, clearError, fs, ai, kv } = usePuterStore();
     const navigate = useNavigate();

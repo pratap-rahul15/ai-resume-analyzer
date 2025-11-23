@@ -1,3 +1,4 @@
+// Summary component displaying resume feedback scores
 import ScoreGauge from "~/components/ScoreGauge";
 import ScoreBadge from "~/components/ScoreBadge";
 

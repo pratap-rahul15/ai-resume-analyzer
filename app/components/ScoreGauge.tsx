@@ -1,3 +1,4 @@
+// A semi-circular gauge component to display a score out of 100 with a gradient fill and rounded ends.
 import { useEffect, useRef, useState } from "react";
 
 const ScoreGauge = ({ score = 71 }: { score: number }) => {

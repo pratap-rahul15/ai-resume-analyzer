@@ -98,7 +98,7 @@ interface PuterStore {
 
 const getPuter = (): typeof window.puter | null =>
   typeof window !== "undefined" && window.puter ? window.puter : null;
-
+// Initialize the Puter store
 export const usePuterStore = create<PuterStore>((set, get) => {
   const setError = (msg: string) => {
     set({
@@ -115,7 +115,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       },
     });
   };
-
+// Check authentication status
   const checkAuthStatus = async (): Promise<boolean> => {
     const puter = getPuter();
     if (!puter) {
@@ -164,7 +164,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       return false;
     }
   };
-
+// Sign in function
   const signIn = async (): Promise<void> => {
     const puter = getPuter();
     if (!puter) {
@@ -182,7 +182,7 @@ export const usePuterStore = create<PuterStore>((set, get) => {
       setError(msg);
     }
   };
-
+// Sign out function
   const signOut = async (): Promise<void> => {
     const puter = getPuter();
     if (!puter) {
